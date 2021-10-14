@@ -3,8 +3,8 @@ from enum import (
     Enum,
     unique,
 )
+from typing import NamedTuple
 
-from typring import NamedTuple
 
 @unique
 class TokenType(Enum):
@@ -16,11 +16,13 @@ class TokenType(Enum):
     ILLEGAL = auto()
     INT = auto()
     LBRACE = auto()
+    LET = auto()
     LPAREN = auto()
     PLUS = auto()
     RBRACE = auto()
     RPAREN = auto()
     SEMICOLON = auto()
+
 
 class Token(NamedTuple):
     token_type: TokenType
